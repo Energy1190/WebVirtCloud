@@ -1,6 +1,7 @@
 FROM ubuntu
 
-RUN apt-get -y install git \
+RUN apt-get update && \
+    apt-get -y install git \
     python-virtualenv \
     python-dev \
     libxml2-dev \
