@@ -4,6 +4,7 @@ RUN apt-get update && \
     apt-get -y install git \
     python-virtualenv \
     python-dev \
+    python-pip \
     libxml2-dev \
     libvirt-dev \
     zlib1g-dev \
