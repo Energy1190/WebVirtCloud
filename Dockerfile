@@ -17,7 +17,7 @@ RUN git clone https://github.com/retspen/webvirtcloud && \
     mv /webvirtcloud /srv
 
 RUN chown -R www-data:www-data /srv/webvirtcloud && \
-    /srv/webvirtcloud/virtualenv venv
+    virtualenv /srv/webvirtcloud/venv
     
 RUN source /srv/webvirtcloud/venv/bin/activate && \
     pip install -r /srv/webvirtcloud/conf/requirements.txt
