@@ -19,7 +19,8 @@ RUN git clone https://github.com/retspen/webvirtcloud && \
 RUN chown -R www-data:www-data /srv/webvirtcloud && \
     virtualenv /srv/webvirtcloud/venv
     
-RUN /srv/webvirtcloud/venv/bin/activate && \
+RUN chmod +x /srv/webvirtcloud/venv/bin/activate && \
+    /srv/webvirtcloud/venv/bin/activate && \
     pip install -r /srv/webvirtcloud/conf/requirements.txt
     
 RUN python manage.py migrate && \
