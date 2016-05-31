@@ -24,7 +24,7 @@ RUN chmod +x /srv/webvirtcloud/venv/bin/activate && \
     /srv/webvirtcloud/venv/bin/activate && \
     pip install -r /srv/webvirtcloud/conf/requirements.txt
     
-RUN python manage.py migrate && \
+RUN python /srv/webvirtcloud/manage.py migrate && \
     chown -R www-data:www-data /srv/webvirtcloud && \
     rm /etc/nginx/sites-enabled/default
     
